@@ -3,17 +3,30 @@
 let _trials = [];
 
 
-const _trialRef = _db.collection("user");
 
-_trialRef.onSnapshot(function (snapshotData) {
-    _trials = [];
-    snapshotData.forEach(function (doc) {
-        let trial = doc.data();
-        trial.id = doc.id;
-        _trials.push(trial);
-    });
-    appendTrials(_trials);
-});
+
+
+
+function init() {
+    _userRef.doc(_currentUser.uid).onSnapshot({
+        includeMetadataChanges: true
+
+    }, function (userData) {
+        if (!userData.metadata.hasPendingWrites && userData.data()) {
+            _currentUser = {
+                ...firebase.auth().currentUser,
+                ...userData.data()
+            };
+            console.log(_currentUser.NewTrial);
+
+        }
+        appendTrials(_currentUser.NewTrial);
+    }
+
+    );
+
+}
+
 
 
 
@@ -23,11 +36,12 @@ function appendTrials(trials) {
     for (let trial of trials) {
 
 
+
         console.log(trial);
         htmlTemplate += `
         <article>
         
-                <h2>${trial.NewTrial}</h2>
+                <h2>${trial.name}</h2>
                 
         </article>
         `;

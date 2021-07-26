@@ -1,0 +1,41 @@
+form {
+height: 500px;
+width: 800px;
+border-radius: 16px;
+    background-color: white;
+      position: absolute;
+      top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    
+}
+
+.firebaseui-title  {
+   content: "cake";
+    font-size: 24px;
+    color: green;
+    
+}
+
+#firebaseui-auth-container {
+     margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mdl-card  {
+ box-shadow: none;
+}
+
+.firebaseui-textfield.mdl-textfield .firebaseui-input {
+    background-color: white;
+   padding-left: 10px;
+    border-radius: 40px;
+}
+
+
+.mdl-textfield--floating-label .mdl-textfield__label {
+    padding-left: 10px;
+}

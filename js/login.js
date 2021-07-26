@@ -46,7 +46,7 @@ function userNotAuthenticated() {
         credentialHelper: firebaseui.auth.CredentialHelper.NONE,
         signInOptions: [
             firebase.auth.EmailAuthProvider.PROVIDER_ID,
-            firebase.auth.FacebookAuthProvider.PROVIDER_ID
+
         ],
         signInSuccessUrl: '#preferences'
     };
