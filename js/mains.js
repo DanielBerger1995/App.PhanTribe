@@ -6,7 +6,6 @@ let _trials = [];
 
 
 
-
 function init() {
     _userRef.doc(_currentUser.uid).onSnapshot({
         includeMetadataChanges: true
@@ -91,24 +90,24 @@ function create() {
 var applied = localStorage.getItem("applied") == "true";
 if (applied) {
     $('#createEvento').css('opacity', '0');
+    $('#oneChange').text('0');
 } else {
     $('#createEvento').css('opacity', '1');
+    $('#oneChange').text('1');
 }
 
 $('#changeHome').click(function () {
     if (!applied) {
         $('#createEvento').css('opacity', '0');
+        $('#oneChange').text('0');
         applied = true;
     } else {
         $('#createEvento').css('opacity', '1');
+        $('#oneChange').text('1');
         applied = false;
     }
     localStorage.setItem("applied", applied);
 });
-
-
-
-
 
 
 
