@@ -48,7 +48,7 @@ function userNotAuthenticated() {
             firebase.auth.EmailAuthProvider.PROVIDER_ID,
 
         ],
-        signInSuccessUrl: '#preferences'
+        signInSuccessUrl: '#home'
     };
     // Init Firebase UI Authentication
     const ui = new firebaseui.auth.AuthUI(firebase.auth());

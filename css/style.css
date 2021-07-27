@@ -1,5 +1,7 @@
+
 form {
-height: 500px;
+     
+height: 420px;
 width: 800px;
 border-radius: 16px;
     background-color: white;
@@ -11,31 +13,120 @@ border-radius: 16px;
 }
 
 .firebaseui-title  {
-   content: "cake";
-    font-size: 24px;
-    color: green;
+   visibility: hidden;
     
 }
-
+.logintxt {
+    margin-top: -170px;
+    position: absolute;
+        top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  font-size: 24px;
+    
+}
 #firebaseui-auth-container {
-     margin: 0;
+    
+     
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+ 
+ 
 }
 
-.mdl-card  {
- box-shadow: none;
+
+.firebaseui-card-content {
+    padding-left: 90px;
+   display: flex;
+   justify-content: space-around;
+   flex-direction: column;
+  
+   
 }
 
 .firebaseui-textfield.mdl-textfield .firebaseui-input {
-    background-color: white;
-   padding-left: 10px;
+
+    width: 600px;
+    background-color: var(--light-grey);
+   padding-left: 20px;
+   height: 40px;
+  font-size: 18px;
     border-radius: 40px;
 }
 
 
+
+
 .mdl-textfield--floating-label .mdl-textfield__label {
-    padding-left: 10px;
+    padding-left: 20px;
+   padding-top: 15px;
+    font-size: 24px;
+    
+
+}
+
+
+.firebaseui-textfield.mdl-textfield .firebaseui-label::after {
+    visibility: hidden;
+    
+}
+
+.firebaseui-card-actions {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    
+}
+
+.firebaseui-input,
+.firebaseui-input-invalid {
+width: 600px;
+margin-bottom: -10px;
+    background-color: var(--light-grey);
+   padding-left: 20px;
+   height: 40px;
+  border: hidden;
+    border-radius: 40px;
+}
+
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label,
+.mdl-textfield--floating-label.is-dirty .mdl-textfield__label {
+ font-size: 16px;
+ position: absolute;
+ top: -10px;
+ 
+ 
+}
+
+.firebaseui-button {
+     position: absolute;
+      top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+    margin: 140px 0 0 0;
+    width: 200px;
+    height: 50px;
+}
+
+.firebaseui-textfield.mdl-textfield .firebaseui-label::after {
+  background-color:var(--light-grey);
+}
+
+.firebaseui-text {
+    color: rgba(0,0,0,0.87);
+    
+    font-size: 16px;
+   margin-left: -50px;
+    text-align: center;
+}
+
+.firebaseui-form-actions {
+   text-align: center;
+   margin-top: -150px;
 }

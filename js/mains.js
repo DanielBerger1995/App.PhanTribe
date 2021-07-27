@@ -42,12 +42,15 @@ function appendTrials(trials) {
         <article>
         
                 <h2>${trial.name}</h2>
+                <h2>${trial.description}</h2>
+                <h2>${trial.date}</h2>
                 
         </article>
         `;
     }
 
     document.querySelector('#event-container').innerHTML = htmlTemplate;
+    document.querySelector('#eventz-container').innerHTML = htmlTemplate;
 
 }
 
@@ -58,9 +61,14 @@ function appendTrials(trials) {
 function create() {
     // references to the input fields
     let nameInput = document.querySelector('#name');
+    let descriptionInput = document.querySelector('#description');
+    let dateInput = document.querySelector('#date');
+
 
     let newEvent = {
         name: nameInput.value,
+        description: descriptionInput.value,
+        date: dateInput.value,
 
     };
     _userRef.doc(_currentUser.uid).set({
@@ -69,7 +77,7 @@ function create() {
         merge: true
     });
 
-    navigateTo("home");
+    navigateTo("about");
 
 }
 
@@ -80,9 +88,23 @@ function create() {
 
 
 
+var applied = localStorage.getItem("applied") == "true";
+if (applied) {
+    $('#createEvento').css('opacity', '0');
+} else {
+    $('#createEvento').css('opacity', '1');
+}
 
-
-
+$('#changeHome').click(function () {
+    if (!applied) {
+        $('#createEvento').css('opacity', '0');
+        applied = true;
+    } else {
+        $('#createEvento').css('opacity', '1');
+        applied = false;
+    }
+    localStorage.setItem("applied", applied);
+});
 
 
 

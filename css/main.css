@@ -1,5 +1,6 @@
 /* ---------- root variables ---------- */
 :root {
+  --ion-color-primary: green;
   --green: rgb(38, 76, 89);
   --light-green: rgb(172, 198, 201);
   --light-grey: #f1f1f4;
@@ -173,38 +174,6 @@ h1 {
   transition: visibility 0s 0.4s, opacity 0.4s linear;
 }
 
-/* ---------- authentication styling ---------- */
-#firebaseui-auth-container {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.firebaseui-container {
-  font-family: var(--font-family);
-  font: 16px var(--font-family);
-}
-
-.firebaseui-title {
-  text-align: center;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.mdl-button--raised.mdl-button--colored,
-.mdl-button--raised.mdl-button--colored:active,
-.mdl-button--raised.mdl-button--colored:hover {
-  background: var(--green);
-  color: #fff;
-  border-radius: 0;
-}
-
-.firebaseui-textfield.mdl-textfield .firebaseui-label::after {
-  background-color: var(--green);
-}
 
 .profile-img{
   width: 100%;
@@ -236,4 +205,55 @@ h1 {
   font-weight: 700;
   font-style: normal;
   margin: 0;
+}
+
+
+.freeheader {
+  border-radius: 16px;
+  margin: 50px auto;
+  width: 1000px;
+  height: 200px;
+  background-color: green;
+}
+
+.clickcreate {
+    border-radius: 16px;
+  margin: 50px auto;
+  width: 1000px;
+  height: 400px;
+  background-color: white;
+}
+
+.event_wrapper {
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  height: 400px;
+}
+
+.phanEvents {
+width: 300px;
+height: 100%;
+background-color: yellow;
+}
+
+
+
+
+.form {
+  margin: 100px auto;
+  width: 800px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.form input {
+  margin-top: 50px;
+} 
+
+
+.home-empty{
+    opacity: 0;
 }

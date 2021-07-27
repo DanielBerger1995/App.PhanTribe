@@ -13,6 +13,7 @@
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/style.css">
+
   <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 </head>
 
@@ -31,16 +32,42 @@
     <header class="topbar">
       <h2>Home</h2>
     </header>
-    <div id="event-container" class="grid-container"></div>
-    <p>My Single Page Web App Template</p>
+    <div id="hello">HI </div>
+    <p>welcome to your free trial</p>
+    <div class="freeheader">
+      <div class="freetitle"> 1 Free Trial</div>
+      <div class="freedetails">7days</div>
+    </div>
+
+    <div class="clickcreate"> Create your event!
+      <div id="eventz-container" class="grid-container"></div>
+      <a href="#chooseEvent"><button id="createEvento">create event</button></a>
+    </div>
+  </section>
+
+  <section id="chooseEvent" class="page">
+    <header class="topbar">
+      <h2>choose event</h2>
+    </header>
+    <div class="event_wrapper">
+      <div class="phanEvents">
+        <a href="#create"> <button>create trial</button></a>
+      </div>
+      <div class="phanEvents"></div>
+      <div class="phanEvents"></div>
+
+    </div>
 
   </section>
+
 
   <!-- about page -->
   <section id="about" class="page">
     <header class="topbar">
       <h2>About</h2>
     </header>
+    <div id="event-container" class="grid-container"></div>
+
     <p>This is my about page</p>
   </section>
 
@@ -51,11 +78,14 @@
       <h2>Create user</h2>
       <a class="right" onclick="create()">Save</a>
     </header>
-    <form>
+    <div class="form">
       <input type="text" id="name" placeholder="Type your name" required>
+      <input type="text" id="description" placeholder="Enter a description">
+      <input type="text" id="date" placeholder="start" required>
 
-      <div onclick="create()">Save User</div>
-    </form>
+    </div>
+    <div id="changeHome" onclick="create()">Save User</div>
+
   </section>
 
   <!-- contact page -->
@@ -74,20 +104,23 @@
     </header>
 
     <!-- firebase auth container  -->
-    <section id="firebaseui-auth-container"></section>
+    <div class="logintxt">Hey there new PhanTriber</div>
+
+    <section id="firebaseui-auth-container">
+
+    </section>
   </section>
 
   <!-- loader  -->
   <div id="loader">
     <div class="spinner"></div>
   </div>
-  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
-
-  <!-- Add Firebase products that you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
   <script src="js/firebase_config.js"></script>
   <script src="js/login.js"></script>
   <!-- spa js file -->
