@@ -3,10 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <title>SINGLE PAGE WEB WITH LOGIN</title>
+  <title>App.PhanTribe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Get started with HTML, CSS and JavaScript">
-  <meta name="author" content="Rasmus Cederdorff">
+  <meta name="author" content="Daniel Berger">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
@@ -14,7 +17,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="Images/g.png" />
 </head>
 
 <body onhashchange="pageChange()">
@@ -30,33 +33,100 @@
   <!-- home page -->
   <section id="home" class="page">
     <header class="topbar">
-      <h2>Home</h2>
+      <h2>PhanTribe Lifestyle</h2>
+      <a class="right" href="#" onclick="logout()">Logout</a>
     </header>
-    <div id="hello">HI </div>
-    <p>welcome to your free trial</p>
-    <div class="freeheader">
-      <div id="oneChange" class="one"></div>
-      <div class="freetitle"> 1 Free Trial</div>
-      <div class="freedetails">7days</div>
+
+    <h2 class="tophed">Hey there new PhanTriber!</h2>
+    <div class="freeheader" id="">
+      <div class="freeleft">
+        <div id="oneChange" class="one"></div>
+        <div class="freetitle">ONE TIME EVENT, 10 USERS LIMIT</div>
+      </div>
+      <div class="freedetails">7days / 0kr</div>
     </div>
 
-    <div class="clickcreate"> Create your event!
-      <div id="eventz-container" class="grid-container"></div>
-      <a href="#chooseEvent"><button id="createEvento">create event</button></a>
+    <div class="clickcreate">
+      <div id="eventz-container"></div>
+      <div class="getstarted" id="createEvento">
+
+        <h2 class="lego">Lets get started!</h2>
+
+        <p class="gettxt">Click the button below, customize your free trial to your liking and invite up to 10 friends
+          to have a blast!
+        </p>
+        <br>
+
+        <a href="#chooseEvent"><button class="button1">create event</button></a>
+      </div>
     </div>
+    <div class="contactbot">
+      <p>If you have any questions regarding your trial event</p>
+      <p class="linkco"> &nbsp;contact us!</p>
+    </div>
+
+
   </section>
 
   <section id="chooseEvent" class="page">
     <header class="topbar">
-      <h2>choose event</h2>
+      <h2>PhanTribe Lifestyle</h2>
     </header>
-    <div class="event_wrapper">
-      <div class="phanEvents">
-        <a href="#create"> <button>create trial</button></a>
-      </div>
-      <div class="phanEvents"></div>
-      <div class="phanEvents"></div>
+    <h2 class="tophed">Choose event</h2>
 
+    <div class="event_wrapper">
+      <div class="eventbox">
+        <div class="phanEvents1">
+
+          <img src="/Images/g.png" alt="" class="appi">
+          <div class="intxt">
+            <p>PhanTribe GO!</p>
+            <p class="indes">Walking Running Biking</p>
+          </div>
+          <a href="#create">
+
+
+            <button class="button1">create trial</button></a>
+        </div>
+        <div class="phanEvents">
+
+          <img src="/Images/t.png" alt="" class="appi">
+          <div class="intxt">
+            <p>PhanTribe Thunder</p>
+            <p class="indes">Free weight workouts</p>
+          </div>
+          <a href="#create">
+
+
+            <button class="button1">contact us</button></a>
+        </div>
+      </div>
+      <div class="eventbox">
+        <div class="phanEvents">
+
+          <img src="/Images/f.png" alt="" class="appi">
+          <div class="intxt">
+            <p>PhanTribe Foodie</p>
+            <p class="indes">Healthy eating habits</p>
+          </div>
+
+
+
+          <button class="button1">contact us</button>
+        </div>
+        <div class="phanEvents">
+
+          <img src="/Images/c.png" alt="" class="appi">
+          <div class="intxt">
+            <p>PhanTribe Charity</p>
+            <p class="indes">Support a good cause</p>
+          </div>
+
+
+
+          <button class="button1">contact us</button>
+        </div>
+      </div>
     </div>
 
   </section>
@@ -65,27 +135,67 @@
   <!-- about page -->
   <section id="about" class="page">
     <header class="topbar">
-      <h2>About</h2>
+      <h2>PhanTribe Lifestyle</h2>
     </header>
-    <div id="event-container" class="grid-container"></div>
+    <div class="formwrapper1">
 
-    <p>This is my about page</p>
+      <div class="form"></div>
+
+      <img src="/Images/g.png" alt="" class="gi">
+      <h2 class="et">PhanTribe GO!</h2>
+      <div id="event-container" class="eventcont"></div>
+
+    </div>
+
+    </div>
+
+
+
   </section>
 
   <!-- clients page -->
   <section id="create" class="page">
     <header class="topbar">
-      <a class="left" href="#home">Back</a>
-      <h2>Create user</h2>
-      <a class="right" onclick="create()">Save</a>
+
+      <h2>PhanTribe Lifestyle</h2>
+
     </header>
-    <div class="form">
-      <input type="text" id="name" placeholder="Type your name" required>
-      <input type="text" id="description" placeholder="Enter a description">
-      <input type="text" id="date" placeholder="start" required>
+
+    <div class="formwrapper">
+
+      <div class="form"></div>
+
+      <img src="/Images/g.png" alt="" class="gi">
+      <h2 class="et">PhanTribe GO!</h2>
+      <div class="selectcat">
+        <div id="a" class="div" data-value="Walking">Walking</div>
+        <div id="b" class="div" data-value="Running">Running</div>
+        <div id="c" class="div" data-value="Biking">Biking</div>
+      </div>
+      <div class="inputs">
+        <input type="text" id="name" class="in" placeholder="Name your event" required>
+        <input type="text" id="description" class="in" placeholder="Add a description">
+        <input type="date" id="date" class="in" placeholder="start" required>
+      </div>
+
+
+
+
+      <div class="selector">
+        <select class="cate" id="categories" name="categories">
+
+
+          <option value="Walking" class="categ">Walking</option>
+          <option value="Running" class="categ">Running</option>
+          <option value="Biking" class="categ">Biking</option>
+        </select>
+      </div>
+      <br>
+      <div class="button2" id="changeHome" onclick="create()">Create Event</div>
+    </div>
 
     </div>
-    <div id="changeHome" onclick="create()">Save User</div>
+
 
   </section>
 
@@ -93,7 +203,7 @@
   <section id="profile" class="page">
     <header class="topbar">
       <h2>Profile</h2>
-      <a class="right" href="#" onclick="logout()">Logout</a>
+
     </header>
     <div id="user-data"></div>
   </section>

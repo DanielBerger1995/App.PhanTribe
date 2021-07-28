@@ -1,19 +1,19 @@
 /* ---------- root variables ---------- */
 :root {
-  --ion-color-primary: green;
-  --green: rgb(38, 76, 89);
-  --light-green: rgb(172, 198, 201);
-  --light-grey: #f1f1f4;
-  --text-color-light: #f1f1f1;
-  --text-color-dark: #333;
-  --font-family: Helvetica, Arial, sans-serif;
+  --green: #239F4D;
+  --light-grey: #F3F5F8;
+  --dark-grey: #30353f;
+  --light-blue: #629af5;
+  --white: #ffffff   ;
+  --text-color-light: #9da6ab;
+ 
 }
 
 /* ---------- general styling ---------- */
 html {
   color: var(--text-color-dark);
   font-family: var(--font-family);
-  height: 100%;
+  height: 100;
   text-align: center;
   width: 100%;
   font-weight: 200;
@@ -31,10 +31,12 @@ h1 {
 
 /* ---------- topbar styling ---------- */
 .topbar {
-  background-color: var(--green);
-  color: var(--text-color-light);
+  background-color: white;
+  color: var(--dark-grey);
+  font-family: inter;
+font-size: 26px;
+display: flex;
   padding: 13.5px;
-  text-transform: uppercase;
   position: fixed;
   top: 0;
   left: 0;
@@ -70,6 +72,7 @@ h1 {
   left: 0;
   right: 0;
   z-index: 9999;
+  visibility: hidden;
 }
 
 /* Style the links inside the navigation bar */
@@ -209,41 +212,100 @@ h1 {
 
 
 .freeheader {
+ 
+  font-family: inter;
+font-weight: bold;
+color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 16px;
-  margin: 50px auto;
+  margin: 30px auto;
   width: 1000px;
-  height: 200px;
-  background-color: green;
+  height: 120px;
+  background-color: var(--green);
 }
 
+.freeleft {
+  margin-left: 50px;
+  text-align: left;
+}
+
+.freedetails {
+  margin-right: 50px;
+  font-size: 20px;
+}
 .clickcreate {
+ display: flex;
+ justify-content: center;
+ align-items: center;
     border-radius: 16px;
-  margin: 50px auto;
+  margin: 30px auto;
   width: 1000px;
-  height: 400px;
+  height: 240px;
   background-color: white;
 }
 
 .event_wrapper {
-  margin: 100px auto;
+  margin: 60px auto;
   display: flex;
   justify-content: space-around;
-  width: 60%;
+  width: 1200px;
   height: 400px;
 }
 
-.phanEvents {
-width: 300px;
-height: 100%;
-background-color: yellow;
+.eventbox {
+ 
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.phanEvents1 {
+  
+  border-radius: 16px;
+width: 560px;
+height: 160px;
+background-color: white;
+display: flex;
+justify-content: space-around;
+align-items: center;
 }
 
+.phanEvents {
+  opacity: 0.6;
+  border-radius: 16px;
+width: 560px;
+height: 160px;
+background-color: white;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
 
-
-
+.intxt {
+  text-align: left;
+  margin-left: -100px;
+}
+.appi {
+  margin-top: 10px;
+  margin-left: -10px;
+}
+.indes {
+  
+  margin-top: -10px;
+}
+.formwrapper {
+  border-radius: 16px;
+  margin: auto;
+  width: 1000px;
+  background-color: white;
+  height: 600px;
+}
 .form {
-  margin: 100px auto;
-  width: 800px;
+  
+  margin: 60px auto;
+  width: 1000px;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -253,8 +315,150 @@ background-color: yellow;
   margin-top: 50px;
 } 
 
+.selectcat {
+  margin: auto;
+  width: 600px;
+  justify-content: space-around;
+  display: flex;
+}
 
+.div {
+  align-self: center;
+  font-family: Inter;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: var(--light-grey);
+}
+
+.selector {
+  visibility: hidden;
+}
+
+.inputs {
+  margin:  auto;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.in {
+  font-family: inter;
+  border-radius: 16px;
+  padding: 8px 16px;
+  margin-top: 50px;
+  outline: none;
+  border: none;
+  background-color: var(--light-grey);
+}
+.gi {
+  margin-top: -40px;
+  
+}
+
+.et {
+  margin-top: -20px;
+  margin-bottom: 50px;
+}
 .home-empty{
     opacity: 0;
 }
 
+.one {
+  font-size: 36px;
+  font-family: inter;
+font-weight: bold;
+color: white;
+}
+
+.border {
+  border: 3px solid var(--green);
+}
+
+.button1 {
+    color: var(--light-blue);
+    background-color: var(--white);
+    border: 3px solid var(--light-blue);
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.button1:hover {
+  border: 3px solid #a1c3fa;
+    color: #a1c3fa;
+   
+}
+
+.button2 {
+  margin: auto;
+    color: var(--light-blue);
+    background-color: var(--white);
+    border: 3px solid var(--light-blue);
+    padding: 8px 16px;
+    border-radius: 8px;
+    width: 100px;
+}
+h2 {
+    font-size: 24px;
+    font-family: inter;
+    color: var(--dark-grey);
+}
+
+.gettxt {
+  font-family: inter;
+  font-size: 18px;
+  width: 600px;
+}
+
+.tophed {
+  margin-top: 30px;
+}
+
+p {
+  font: 18px;
+  font-family: inter;
+}
+
+.contactbot {
+ justify-content: center;
+  display: flex;
+}
+
+.linkco {
+  color: var(--light-blue);
+  font-weight: bold;
+}
+
+.lego {
+  margin-top: -20px;
+}
+
+.eventcont {
+  margin-top: -20px;
+}
+.eventT {
+  font-size: 36px;
+}
+
+.codewrap{
+  margin: auto;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.codein {
+height: 400px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+font-family: Inter;
+}
+
+.formwrapper1 {
+  border-radius: 16px;
+  margin: auto;
+  width: 1000px;
+  background-color: white;
+  height: 1000px;
+  margin-bottom: 50px;
+}

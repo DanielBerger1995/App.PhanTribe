@@ -77,20 +77,5 @@ function hideTabbar(hide) {
     }
 }
 
-//=== Init function for whole SPA ===//
-function init() {
-    // init user data and favourite movies
-    _userRef.doc(_currentUser.uid).onSnapshot({
-        includeMetadataChanges: true
-    }, function (userData) {
-        if (!userData.metadata.hasPendingWrites && userData.data()) {
-            _currentUser = {
-                ...firebase.auth().currentUser,
-                ...userData.data()
-            }; //concating two objects: authUser object and userData objec from the db
 
-
-        }
-    });
-}
 
