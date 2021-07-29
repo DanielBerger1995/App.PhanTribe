@@ -143,7 +143,6 @@ var applied = localStorage.getItem("applied") == "true";
 if (applied) {
     $('#createEvento').css('opacity', '0');
     $('#tored').css('background-color', '#D75D4D');
-
     $('#oneChange').text('0');
 } else {
     $('#createEvento').css('opacity', '1');
