@@ -34,9 +34,6 @@ function init() {
 function appendDetails(details) {
     let htmlTemplate = "";
     for (let detail of details) {
-
-
-
         console.log(detail);
         htmlTemplate += `
         <article>
@@ -91,7 +88,6 @@ function appendTrials(trials) {
         <article>
         
                 <h2>${trial.name}</h2>
-                
                 <h2>${trial.date}</h2>
                 
 
@@ -143,7 +139,7 @@ var applied = localStorage.getItem("applied") == "true";
 if (applied) {
     $('#createEvento').css('opacity', '0');
     $('#tored').css('background-color', '#D75D4D');
-    $('#oneChange').text('0');
+    $('#oneChange').text('0 Free Event Trial');
 } else {
     $('#createEvento').css('opacity', '1');
     $('#tored').css('background-color', '#239F4D');
@@ -154,7 +150,7 @@ $('#changeHome').click(function () {
     if (!applied) {
         $('#createEvento').css('opacity', '0');
         $('#tored').css('background-color', '#D75D4D');
-        $('#oneChange').text('0');
+        $('#oneChange').text('0 Free Event Trial');
         applied = true;
     } else {
         $('#createEvento').css('opacity', '1');
@@ -187,9 +183,7 @@ $('#c').click(function () {
     $('#c').addClass("border");
 });
 
-$('#start_date').change(function () {
-    $('#end_date').val(Add7Days());
-});
+
 
 
 

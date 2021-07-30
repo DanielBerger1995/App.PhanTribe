@@ -23,16 +23,6 @@ function userAuthenticated(user) {
     init();
     showLoader(false);
 
-
-
-    // Appending currentUser name ans surname to HTML
-    document.getElementById("hello").innerHTML = "Hi " + user.displayName;
-    document.getElementById("user-name").innerHTML =
-        `<h2>${user.displayName}</h2>`;
-    document.getElementById("user-photo").innerHTML =
-        `<img src="${user.photoURL}+ "?width=100&height=100">`;
-    document.getElementById("user-photo-update").innerHTML =
-        `<img src="${user.photoURL}+ "?width=100&height=100">`;
 }
 
 
